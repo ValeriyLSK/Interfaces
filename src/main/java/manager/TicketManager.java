@@ -3,6 +3,8 @@ package manager;
 import data.Ticket;
 import repository.TicketRepository;
 
+import java.util.Arrays;
+
 public class TicketManager {
     private TicketRepository repository;
 
@@ -27,6 +29,7 @@ public class TicketManager {
                 result = tmp;
             }
         }
+        Arrays.sort(result);
         return result;
     }
 

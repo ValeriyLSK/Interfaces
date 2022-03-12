@@ -40,7 +40,6 @@ class TicketManagerTest {
         manager.findByAirport("LED", "KVK");
         Ticket[] expected = new Ticket[]{ticket2, ticket1};
         Ticket[] actual = manager.findByAirport("LED", "KVK");
-        Arrays.sort(actual);
         assertArrayEquals(expected, actual);
     }
 
@@ -59,7 +58,6 @@ class TicketManagerTest {
         manager.add(ticket11);
         Ticket[] expected = new Ticket[]{ticket4};
         Ticket[] actual = manager.findByAirport("LED", "DXB");
-        Arrays.sort(actual);
         assertArrayEquals(expected, actual);
     }
 
